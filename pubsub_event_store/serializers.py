@@ -1,6 +1,6 @@
 from rest_framework import serializers
 
-from event_data.models import EventDetails
+from pubsub_event_store.models import EventDetails
 
 
 class EventDetailsSerializer(serializers.ModelSerializer):

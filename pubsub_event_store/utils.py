@@ -1,6 +1,6 @@
 from uuid import uuid4
 
-from event_data.serializers import EventDetailsSerializer
+from pubsub_event_store.serializers import EventDetailsSerializer
 
 
 def create_event(adapter_name, body):

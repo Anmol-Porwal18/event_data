@@ -4,7 +4,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 
 setuptools.setup(
-    name="event_data",
+    name="pubsub_event_store",
     version="v0.0.1",
     install_requires=[
         "django==3.2.11",
@@ -18,7 +18,7 @@ setuptools.setup(
     long_description=long_description,
     long_description_content_type="text/markdown",
     license="MIT",
-    url="https://github.com/Anmol-Porwal18/event_data",
+    url="https://github.com/Anmol-Porwal18/pubsub_event_store",
     platforms=["any"],
     classifiers=[
         "Programming Language :: Python :: 3.7",
@@ -28,5 +28,5 @@ setuptools.setup(
     package_dir={"": "."},
     packages=setuptools.find_packages(exclude=("sample",)),
     python_requires=">=3.7",
-    keywords=["events", "rabbitmq", "replay events"],
+    keywords=["events", "rabbitmq", "replay events", "pubsub"],
 )

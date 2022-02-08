@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from event_data.models import EventDetails
+from pubsub_event_store.models import EventDetails
 
 
 class EventDetailsAdmin(admin.ModelAdmin):
