@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pubsub_event_store",
-    version="v0.0.1",
+    version="v0.0.2",
     install_requires=[
         "django==3.2.11",
         "django-model-utils==4.0.0",

@@ -13,4 +13,4 @@ def create_event(adapter_name, body):
     serializer = EventDetailsSerializer(data=data)
     serializer.is_valid(raise_exception=True)
     event_details = serializer.save()
-    return event_details.event_id
+    return event_details
