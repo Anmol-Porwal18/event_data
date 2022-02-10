@@ -5,12 +5,12 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="pubsub_event_store",
-    version="v0.0.2",
+    version="v0.0.3",
     install_requires=[
-        "django==3.2.11",
-        "django-model-utils==4.0.0",
-        "djangorestframework==3.11.2",
-        "django-environ==0.4.5",
+        "django>=3.2.11",
+        "django-model-utils>=4.0.0",
+        "djangorestframework>=3.11.2",
+        "django-environ>=0.4.5",
     ],
     author="Anmol Porwal",
     author_email="anmolporwal@ymail.com",

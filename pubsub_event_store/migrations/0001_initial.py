@@ -7,21 +7,34 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='EventDetails',
+            name="EventDetails",
             fields=[
-                ('event_id', models.UUIDField(primary_key=True, serialize=False, unique=True)),
-                ('adapter', models.CharField(max_length=30)),
-                ('status', models.CharField(choices=[('PENDING', 'PENDING'), ('FAILED', 'FAILED'), ('SUCCESS', 'SUCCESS')], default='PENDING', max_length=20)),
-                ('data', models.JSONField(blank=True, default=dict, null=True)),
-                ('result', models.TextField(blank=True, null=True)),
-                ('error', models.TextField(blank=True, null=True)),
-                ('created_at', models.DateTimeField(auto_now_add=True)),
-                ('updated_at', models.DateTimeField(auto_now=True)),
+                (
+                    "event_id",
+                    models.UUIDField(primary_key=True, serialize=False, unique=True),
+                ),
+                ("adapter", models.CharField(max_length=30)),
+                (
+                    "status",
+                    models.CharField(
+                        choices=[
+                            ("PENDING", "PENDING"),
+                            ("FAILED", "FAILED"),
+                            ("SUCCESS", "SUCCESS"),
+                        ],
+                        default="PENDING",
+                        max_length=20,
+                    ),
+                ),
+                ("data", models.JSONField(blank=True, default=dict, null=True)),
+                ("result", models.TextField(blank=True, null=True)),
+                ("error", models.TextField(blank=True, null=True)),
+                ("created_at", models.DateTimeField(auto_now_add=True)),
+                ("updated_at", models.DateTimeField(auto_now=True)),
             ],
         ),
     ]
