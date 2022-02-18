@@ -4,7 +4,7 @@ from pubsub_event_store.models import EventDetails
 
 
 class EventDetailsAdmin(admin.ModelAdmin):
-    list_display = ("event_id", "adapter", "status", "data", "result", "error")
+    list_display = ("event_id", "adapter", "status", "short_data", "result", "error")
     search_fields = (
         "event_id",
         "adapter",
@@ -16,6 +16,7 @@ class EventDetailsAdmin(admin.ModelAdmin):
     )
     date_hierarchy = "created_at"
     readonly_fields = ("event_id", "adapter", "status", "data", "result", "error")
+    ordering = ("-created_at",)
 
 
 admin.site.register(EventDetails, EventDetailsAdmin)
